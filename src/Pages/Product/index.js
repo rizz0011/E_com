@@ -19,6 +19,8 @@ function Product() {
           "http://localhost:8000/v1/product/getAllProducts"
         );
         const data = await response.json();
+        console.log(data);
+        
         setProductData(data?.data || []);
       } catch (error) {
         console.error("Failed to fetch product data:", error);
